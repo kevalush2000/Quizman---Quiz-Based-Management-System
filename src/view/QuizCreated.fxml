@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.QuizCreatedController"
+      alignment="CENTER"
+      spacing="30"
+      style="-fx-padding: 20;">
+
+    <Label text="Quiz Created Successfully!"
+           style="-fx-font-size: 24pt; -fx-font-weight: bold;" />
+
+    <Label fx:id="accessCodeLabel"
+           style="-fx-font-size: 18pt;" />
+
+    <HBox spacing="20">
+        <Button fx:id="viewQuizzesButton" text="View Quiz Posts"
+                onAction="#handleViewQuizzes"
+                style="-fx-font-size: 14pt;" />
+
+        <Button fx:id="backToMenuButton" text="Back to Menu"
+                onAction="#handleBackToMenu"
+                style="-fx-font-size: 14pt;" />
+    </HBox>
+
+</VBox>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<StackPane fx:id="root" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.TeacherQuizListController">
+    <!-- Background -->
+    <ImageView fx:id="background" preserveRatio="false" />
+
+    <!-- QUIZ POST TEXT.png at top left -->
+    <AnchorPane pickOnBounds="false">
+        <ImageView fx:id="title" fitHeight="-50" preserveRatio="true" 
+                   AnchorPane.topAnchor="30" AnchorPane.leftAnchor="30"/>
+    </AnchorPane>
+
+    <!-- Main Content -->
+    <VBox alignment="TOP_CENTER" spacing="20">
+        <!-- Logo at the top center -->
+        <ImageView fx:id="logo" fitHeight="140" preserveRatio="true" />
+
+        <!-- Quiz List Centered -->
+        <HBox alignment="CENTER">
+            <ScrollPane fx:id="quizScrollPane" fitToWidth="true" style="-fx-background:transparent; -fx-background-color:transparent;">
+                <VBox fx:id="quizListContainer" alignment="CENTER" spacing="100000" />
+            </ScrollPane>
+        </HBox>
+
+        <!-- Back Button at the bottom -->
+        <ImageView fx:id="backButton" fitHeight="70" preserveRatio="true" style="-fx-cursor: hand;"/>
+    </VBox>
+</StackPane>

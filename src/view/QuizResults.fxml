@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<StackPane fx:id="stackPane" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.QuizResultsController">
+    <!-- Responsive Background GIF -->
+    <ImageView fx:id="backgroundImageView" preserveRatio="false"/>
+    <VBox fx:id="root" alignment="CENTER" spacing="40">
+        <!-- Logo at the top center -->
+        <ImageView fx:id="logoImageView" fitHeight="120" preserveRatio="true" />
+        <Label fx:id="scoreLabel" text="Your score will appear here"/>
+        <Label fx:id="messageLabel" text="Message"/>
+        <HBox alignment="CENTER" spacing="30">
+            <Button fx:id="showAnswersButton" text="SHOW ANSWERS" onAction="#handleShowAnswers"/>
+            <Button fx:id="backToMenuButton" text="BACK TO MENU" onAction="#handleBackToMenu"/>
+        </HBox>
+    </VBox>
+</StackPane>

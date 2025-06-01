@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.CreateQuizController">
+    <ImageView fx:id="backgroundImageView" preserveRatio="false"/>
+    <VBox spacing="20" style="-fx-padding: 20;">
+        <Label fx:id="subjectLabel" style="-fx-font-size: 18pt; -fx-font-weight: bold;" />
+        <ScrollPane fitToWidth="true">
+            <VBox fx:id="questionsContainer" spacing="15" />
+        </ScrollPane>
+        <HBox spacing="20" alignment="CENTER_RIGHT">
+            <Button fx:id="addQuestionButton" text="Add Question" style="-fx-font-size: 14pt;" />
+            <Button fx:id="finishQuizButton" text="Finish Quiz" style="-fx-font-size: 14pt;" />
+        </HBox>
+    </VBox>
+</StackPane>

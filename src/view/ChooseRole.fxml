@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.effect.DropShadow?>
+
+<StackPane fx:id="root" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ChooseRoleController">
+    <!-- Background (full screen) -->
+    <ImageView fx:id="background" preserveRatio="false" />
+
+    <!-- Main Content -->
+    <VBox alignment="TOP_CENTER" spacing="90">
+        <!-- Logo at top center -->
+        <ImageView fx:id="logo" fitHeight="150" preserveRatio="true"
+                  style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 2);"/>
+
+        <!-- Title (moderate size) -->
+        <ImageView fx:id="title" fitHeight="60" preserveRatio="true"
+                  style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 1);"/>
+
+        <!-- Extra Large Role Buttons -->
+        <HBox alignment="CENTER" spacing="-5" style="-fx-padding: 50 0 0 0;">
+            <!-- Teacher Button (massive) -->
+            <ImageView fx:id="teacherImage"
+                      fitHeight="20"
+                      preserveRatio="true"
+                      pickOnBounds="true"
+                      style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 20, 0, 0, 10);"/>
+
+            <!-- Student Button (massive) -->
+            <ImageView fx:id="studentImage"
+                      fitHeight="20"
+                      preserveRatio="true"
+                      pickOnBounds="true"
+                      style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 20, 0, 0, 10);"/>
+        </HBox>
+    </VBox>
+</StackPane>

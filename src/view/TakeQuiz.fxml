@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.shape.Rectangle?>
+
+<StackPane fx:id="root" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.TakeQuizController">
+    <!-- Responsive Background GIF -->
+    <ImageView fx:id="backgroundImageView" preserveRatio="false"/>
+    <VBox alignment="TOP_CENTER" spacing="30">
+        <!-- Logo at the top center -->
+        <ImageView fx:id="logoImageView" fitHeight="120" preserveRatio="true" />
+        <!-- Question Rectangle -->
+        <StackPane>
+            <Rectangle fx:id="questionRect" arcWidth="30" arcHeight="30"
+                        fill="#8888" stroke="#7faaff" strokeWidth="3"/>
+            <VBox alignment="CENTER">
+                <Label fx:id="questionNumber" style="-fx-font-family: 'Press Start 2P'; -fx-font-size: 24px; -fx-text-fill: white;"/>
+                <Label fx:id="questionText" wrapText="true"
+                       style="-fx-font-family: 'Press Start 2P'; -fx-font-size: 22px; -fx-text-fill: white;"/>
+            </VBox>
+        </StackPane>
+        <!-- Choices Row -->
+        <HBox alignment="CENTER" spacing="30">
+            <StackPane>
+                <Rectangle fx:id="rect113" width="260" height="100" arcWidth="30" arcHeight="30"
+                           style="-fx-fill: linear-gradient(to right, #ff512f, #f9d423);" />
+                <Label fx:id="choice1" style="-fx-font-family: 'Press Start 2P'; -fx-font-size: 20px; -fx-text-fill: white;"/>
+            </StackPane>
+            <StackPane>
+                <Rectangle fx:id="rect114" width="260" height="100" arcWidth="30" arcHeight="30"
+                           style="-fx-fill: linear-gradient(to right, #8e2de2, #4a00e0);" />
+                <Label fx:id="choice2" style="-fx-font-family: 'Press Start 2P'; -fx-font-size: 20px; -fx-text-fill: white;"/>
+            </StackPane>
+            <StackPane>
+                <Rectangle fx:id="rect115" width="260" height="100" arcWidth="30" arcHeight="30"
+                           style="-fx-fill: linear-gradient(to right, #11998e, #38ef7d);" />
+                <Label fx:id="choice3" style="-fx-font-family: 'Press Start 2P'; -fx-font-size: 20px; -fx-text-fill: white;"/>
+            </StackPane>
+            <StackPane>
+                <Rectangle fx:id="rect116" width="260" height="100" arcWidth="30" arcHeight="30"
+                           style="-fx-fill: linear-gradient(to right, #f7971e, #ffd200);" />
+                <Label fx:id="choice4" style="-fx-font-family: 'Press Start 2P'; -fx-font-size: 20px; -fx-text-fill: white;"/>
+            </StackPane>
+        </HBox>
+        <!-- Navigation Buttons -->
+        <HBox alignment="CENTER" spacing="30">
+            <Button fx:id="nextButton" text="NEXT"
+                    style="-fx-font-family: 'Press Start 2P'; -fx-font-size: 18px; -fx-background-color: #7faaff; -fx-text-fill: white;"/>
+            <Button fx:id="submitButton" text="SUBMIT QUIZ"
+                    style="-fx-font-family: 'Press Start 2P'; -fx-font-size: 18px; -fx-background-color: #ff512f; -fx-text-fill: white;"/>
+        </HBox>
+    </VBox>
+</StackPane>

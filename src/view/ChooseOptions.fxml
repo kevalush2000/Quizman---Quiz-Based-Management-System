@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane fx:id="root" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ChooseOptionController">
+    <!-- Background -->
+    <ImageView fx:id="background" preserveRatio="false" pickOnBounds="false"/>
+    
+    <!-- Main Content -->
+    <VBox alignment="CENTER" spacing="40">
+        <!-- Title -->
+        <ImageView fx:id="title"
+                  fitHeight="80"
+                  preserveRatio="true"
+                  style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0, 0, 2);"/>
+        
+        <!-- Buttons -->
+        <HBox alignment="CENTER" spacing="50">
+            <ImageView fx:id="quizPostsButton"
+                      fitHeight="180"
+                      preserveRatio="true"
+                      pickOnBounds="true"
+                      style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 5);"/>
+            
+            <ImageView fx:id="choosingSubButton"
+                      fitHeight="180"
+                      preserveRatio="true"
+                      pickOnBounds="true"
+                      style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 5);"/>
+        </HBox>
+    </VBox>
+    
+    <!-- Back Button (should be last to ensure it's on top) -->
+    <ImageView fx:id="backButton"
+               fitHeight="60"
+               preserveRatio="true"
+               pickOnBounds="true"
+               style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 1);"
+               StackPane.alignment="TOP_LEFT">
+        <StackPane.margin>
+            <Insets top="20" left="20"/>
+        </StackPane.margin>
+    </ImageView>
+</StackPane>

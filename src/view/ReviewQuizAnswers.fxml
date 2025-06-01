@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.ReviewQuizAnswersController">
+
+    <ImageView fx:id="backgroundImageView" preserveRatio="false"/>
+
+    <VBox alignment="CENTER"
+          spacing="20"
+          style="-fx-padding: 20;">
+
+        <ImageView fx:id="logo" fitHeight="100" preserveRatio="true" />
+
+        <Label fx:id="quizTitleLabel"
+               style="-fx-font-size: 24pt; -fx-font-weight: bold;" />
+
+        <ScrollPane fitToWidth="true">
+            <VBox fx:id="questionsContainer" spacing="10">
+                <!-- Questions and answers will be dynamically added here -->
+            </VBox>
+        </ScrollPane>
+
+        <Button fx:id="backButton" text="Back to Results"
+                onAction="#handleBackToResults"
+                style="-fx-font-size: 14pt;" />
+    </VBox>
+</StackPane>

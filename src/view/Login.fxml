@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.LoginController">
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <ImageView fitWidth="200" fitHeight="200">
+                <image>
+                    <Image url="@/QUIZ ASSETS/images/QUIZMANLOGO.png" />
+                </image>
+            </ImageView>
+
+            <Label text="QuizMan" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+            <VBox spacing="10" alignment="CENTER">
+                <TextField fx:id="usernameField" promptText="Username" style="-fx-pref-width: 200px;"/>
+                <PasswordField fx:id="passwordField" promptText="Password" style="-fx-pref-width: 200px;"/>
+                <Button fx:id="loginButton" text="Login" style="-fx-pref-width: 200px;" onAction="#handleLogin"/>
+            </VBox>
+
+            <Label text="Don't have an account? Sign Up" style="-fx-text-fill: blue; -fx-cursor: hand;"/>
+        </VBox>
+    </center>
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+</BorderPane>
